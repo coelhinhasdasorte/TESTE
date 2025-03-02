@@ -991,5 +991,645 @@
                             <p class="lottery-desc">Loteria da Paraíba</p>
                             <div class="lottery-icon">
                                 <i class="fas fa-ticket-alt"></i>
+                    <!-- LOTEP -->
+                    <div class="lottery-card lotep">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">LOTEP</h3>
+                            <p class="lottery-desc">Loteria da Paraíba</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="lotep-numbers">
+                                <div class="number-ball">5633</div>
+                                <div class="number-ball">9217</div>
+                                <div class="number-ball">0438</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('lotep')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+
+                    <!-- FEDERAL -->
+                    <div class="lottery-card federal">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">LOTERIA FEDERAL</h3>
+                            <p class="lottery-desc">Nacional</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-flag"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="federal-numbers">
+                                <div class="number-ball">12543</div>
+                                <div class="number-ball">87659</div>
+                                <div class="number-ball">09873</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('federal')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                    
+                    <!-- PERNAMBUCO -->
+                    <div class="lottery-card pernambuco">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">PERNAMBUCO</h3>
+                            <p class="lottery-desc">PE 10H, 14H, 18H, 21H</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="pe-numbers">
+                                <div class="number-ball">3154</div>
+                                <div class="number-ball">2267</div>
+                                <div class="number-ball">8891</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('pernambuco')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                    
+                    <!-- MARANHÃO -->
+                    <div class="lottery-card maranhao">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">MARANHÃO</h3>
+                            <p class="lottery-desc">MA 10H, 14H, 18H, 21H</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="ma-numbers">
+                                <div class="number-ball">5472</div>
+                                <div class="number-ball">0925</div>
+                                <div class="number-ball">7314</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('maranhao')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                    
+                    <!-- BAHIA -->
+                    <div class="lottery-card bahia">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">BAHIA</h3>
+                            <p class="lottery-desc">BA 10H, 14H, 18H, 21H</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="bahia-numbers">
+                                <div class="number-ball">1489</div>
+                                <div class="number-ball">7623</div>
+                                <div class="number-ball">5091</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('bahia')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sudeste -->
+                <h3 class="category-title">Sudeste</h3>
+                <div class="lottery-grid">
+                    <!-- RIO DE JANEIRO -->
+                    <div class="lottery-card rj">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">RIO DE JANEIRO</h3>
+                            <p class="lottery-desc">PT, PTN, PTV, CORUJA, LOTERJ</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-monument"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="rj-numbers">
+                                <div class="number-ball">2756</div>
+                                <div class="number-ball">9134</div>
+                                <div class="number-ball">4502</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('rj')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                    
+                    <!-- SÃO PAULO -->
+                    <div class="lottery-card sp">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">SÃO PAULO</h3>
+                            <p class="lottery-desc">LBR, LBS, LBX, SP</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="sp-numbers">
+                                <div class="number-ball">7821</div>
+                                <div class="number-ball">3469</div>
+                                <div class="number-ball">0574</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('sp')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                    
+                    <!-- MINAS GERAIS -->
+                    <div class="lottery-card minas">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">MINAS GERAIS</h3>
+                            <p class="lottery-desc">MG 11H, 14H, 18H, 21H</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="mg-numbers">
+                                <div class="number-ball">5612</div>
+                                <div class="number-ball">3097</div>
+                                <div class="number-ball">8741</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('mg')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Centro-Oeste -->
+                <h3 class="category-title">Centro-Oeste</h3>
+                <div class="lottery-grid">
+                    <!-- MATO GROSSO -->
+                    <div class="lottery-card mt">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">MATO GROSSO</h3>
+                            <p class="lottery-desc">MT-MANHÃ, MT-TARDE, MT-NOITE</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="mt-numbers">
+                                <div class="number-ball">6943</div>
+                                <div class="number-ball">2170</div>
+                                <div class="number-ball">8325</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('mt')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                    
+                    <!-- GOIÁS -->
+                    <div class="lottery-card goias">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">GOIÁS</h3>
+                            <p class="lottery-desc">GOIÁS 11H, 14H, 18H, 21H</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="goias-numbers">
+                                <div class="number-ball">4218</div>
+                                <div class="number-ball">7563</div>
+                                <div class="number-ball">0947</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('goias')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                    
+                    <!-- DISTRITO FEDERAL -->
+                    <div class="lottery-card df">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">DISTRITO FEDERAL</h3>
+                            <p class="lottery-desc">DF 10H, 14H, 18H, 21H</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="df-numbers">
+                                <div class="number-ball">1876</div>
+                                <div class="number-ball">9345</div>
+                                <div class="number-ball">2658</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('df')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sul -->
+                <h3 class="category-title">Sul</h3>
+                <div class="lottery-grid">
+                    <!-- PARANÁ -->
+                    <div class="lottery-card parana">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">PARANÁ</h3>
+                            <p class="lottery-desc">PR 10H, 14H, 18H, 21H</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="pr-numbers">
+                                <div class="number-ball">3542</div>
+                                <div class="number-ball">7908</div>
+                                <div class="number-ball">1265</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('parana')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                    
+                    <!-- RIO GRANDE DO SUL -->
+                    <div class="lottery-card rs">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">RIO GRANDE DO SUL</h3>
+                            <p class="lottery-desc">RS 10H, 14H, 18H, 21H</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-horse"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="rs-numbers">
+                                <div class="number-ball">5127</div>
+                                <div class="number-ball">8394</div>
+                                <div class="number-ball">0672</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('rs')">Ver 10 Palpites</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div
+        
+        <!-- Aba de Resultados -->
+        <div id="resultados" class="tab-content">
+            <h2>Resultados das Loterias</h2>
+            <p>Confira os últimos resultados de todas as loterias do Brasil.</p>
+            
+            <div class="filter-section">
+                <h3>Filtrar Resultados</h3>
+                <div class="filter-grid">
+                    <div class="filter-box">
+                        <label class="filter-label">Estado</label>
+                        <select class="filter-select" id="state-filter">
+                            <option value="todos">Todos</option>
+                            <option value="ce">Ceará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="federal">Federal</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="go">Goiás</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pr">Paraná</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="pe">Pernambuco</option>
+                        </select>
+                    </div>
+                    <div class="filter-box">
+                        <label class="filter-label">Loteria</label>
+                        <select class="filter-select" id="lottery-filter">
+                            <option value="todas">Todas</option>
+                            <option value="lotece">LOTECE</option>
+                            <option value="lotep">LOTEP</option>
+                            <option value="federal">FEDERAL</option>
+                            <option value="pt">PT</option>
+                            <option value="ptn">PTN</option>
+                            <option value="ptv">PTV</option>
+                            <option value="coruja">CORUJA</option>
+                            <option value="loterj">LOTERJ</option>
+                            <option value="lbr">LBR</option>
+                            <option value="lbs">LBS</option>
+                            <option value="lbx">LBX</option>
+                            <option value="sp">SP</option>
+                            <option value="mt-m">MT-MANHÃ</option>
+                            <option value="mt-t">MT-TARDE</option>
+                            <option value="mt-n">MT-NOITE</option>
+                        </select>
+                    </div>
+                    <div class="filter-box">
+                        <label class="filter-label">Data</label>
+                        <input type="date" class="filter-input" id="date-filter">
+                    </div>
+                    <div class="filter-box">
+                        <label class="filter-label">Horário</label>
+                        <select class="filter-select" id="time-filter">
+                            <option value="todos">Todos</option>
+                            <option value="10h">10h</option>
+                            <option value="11h">11h</option>
+                            <option value="14h">14h</option>
+                            <option value="18h">18h</option>
+                            <option value="21h">21h</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <!-- LOTECE -->
+                <div class="result-card lotece">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">LOTECE</h3>
+                            <p class="result-date">01/03/2025 - 14:00</p>
+                        </div>
+                        <div class="lottery-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                    </div>
+                    <div class="result-body">
+                        <div class="result-numbers">
+                            <div class="number-ball">3725</div>
+                        </div>
+                        <div class="result-prize">
+                            Prêmio: R$ 20.000,00
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- LOTEP -->
+                <div class="result-card lotep">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">LOTEP</h3>
+                            <p class="result-date">01/03/2025 - 14:00</p>
+                        </div>
+                        <div class="lottery-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                    </div>
+                    <div class="result-body">
+                        <div class="result-numbers">
+                            <div class="number-ball">5824</div>
+                        </div>
+                        <div class="result-prize">
+                            Prêmio: R$ 15.000,00
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FEDERAL -->
+                <div class="result-card federal">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">LOTERIA FEDERAL</h3>
+                            <p class="result-date">28/02/2025</p>
+                        </div>
+                        <div class="lottery-icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                    </div>
+                    <div class="result-body">
+                        <div class="result-numbers">
+                            <div class="number-ball">23456</div>
+                            <div class="number-ball">67891</div>
+                            <div class="number-ball">09823</div>
+                            <div class="number-ball">34567</div>
+                            <div class="number-ball">78912</div>
+                        </div>
+                        <div class="result-prize">
+                            1º Prêmio: R$ 500.000,00
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RJ - PT -->
+                <div class="result-card rj">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">RIO DE JANEIRO - PT</h3>
+                            <p class="result-date">01/03/2025 - 14:00</p>
+                        </div>
+                        <div class="lottery-icon">
+                            <i class="fas fa-monument"></i>
+                        </div>
+                    </div>
+                    <div class="result-body">
+                        <div class="result-numbers">
+                            <div class="number-ball">5491</div>
+                        </div>
+                        <div class="result-prize">
+                            Bicho: Touro (25)
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SP - LBR -->
+                <div class="result-card sp">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">SÃO PAULO - LBR</h3>
+                            <p class="result-date">01/03/2025 - 11:00</p>
+                        </div>
+                        <div class="lottery-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="result-body">
+                        <div class="result-numbers">
+                            <div class="number-ball">7835</div>
+                        </div>
+                        <div class="result-prize">
+                            Bicho: Burro (35)
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MT - MANHÃ -->
+                <div class="result-card mt">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">MATO GROSSO - MANHÃ</h3>
+                            <p class="result-date">01/03/2025 - 10:00</p>
+                        </div>
+                        <div class="lottery-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                    </div>
+                    <div class="result-body">
+                        <div class="result-numbers">
+                            <div class="number-ball">3217</div>
+                        </div>
+                        <div class="result-prize">
+                            Bicho: Galo (17)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Aba de Estatísticas -->
+        <div id="estatisticas" class="tab-content">
+            <h2>Estatísticas das Loterias</h2>
+            <p>Analise as tendências e os padrões para criar suas próprias estratégias.</p>
+            
+            <div class="filter-section">
+                <h3>Filtrar Estatísticas</h3>
+                <div class="filter-grid">
+                    <div class="filter-box">
+                        <label class="filter-label">Estado</label>
+                        <select class="filter-select" id="stats-state-filter">
+                            <option value="todos">Todos</option>
+                            <option value="ce">Ceará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="federal">Federal</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="go">Goiás</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pr">Paraná</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="pe">Pernambuco</option>
+                        </select>
+                    </div>
+                    <div class="filter-box">
+                        <label class="filter-label">Loteria</label>
+                        <select class="filter-select" id="stats-lottery-filter">
+                            <option value="todas">Todas</option>
+                            <option value="lotece">LOTECE</option>
+                            <option value="lotep">LOTEP</option>
+                            <option value="federal">FEDERAL</option>
+                            <option value="pt">PT</option>
+                            <option value="ptn">PTN</option>
+                            <option value="ptv">PTV</option>
+                            <option value="coruja">CORUJA</option>
+                            <option value="loterj">LOTERJ</option>
+                        </select>
+                    </div>
+                    <div class="filter-box">
+                        <label class="filter-label">Período</label>
+                        <select class="filter-select" id="period-filter">
+                            <option value="7">Últimos 7 dias</option>
+                            <option value="15">Últimos 15 dias</option>
+                            <option value="30">Últimos 30 dias</option>
+                            <option value="90">Últimos 3 meses</option>
+                            <option value="180">Últimos 6 meses</option>
+                            <option value="365">Último ano</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-container">
+                <!-- Milhares Mais Sorteados -->
+                <div class="stats-category">
+                    <h3 class="category-title">Milhares Mais Sorteadas</h3>
+                    <div class="stats-row">
+                        <div class="stats-card">
+                            <h4 class="stats-title"><i class="fas fa-crown"></i> Milhar Mais Sorteada</h4>
+                            <div class="stats-value">3572</div>
+                            <p class="stats-desc">Sorteada 8 vezes nos últimos 30 dias</p>
+                        </div>
+                        <div class="stats-card">
+                            <h4 class="stats-title"><i class="fas fa-medal"></i> Segunda Mais Sorteada</h4>
+                            <div class="stats-value">9814</div>
+                            <p class="stats-desc">Sorteada 7 vezes nos últimos 30 dias</p>
+                        </div>
+                        <div class="stats-card">
+                            <h4 class="stats-title"><i class="fas fa-award"></i> Terceira Mais Sorteada</h4>
+                            <div class="stats-value">6247</div>
+                            <p class="stats-desc">Sorteada 6 vezes nos últimos 30 dias</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <img src="/api/placeholder/800/300" alt="Gráfico de Milhares Mais Sorteadas" />
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Milhar</th>
+                                    <th>Sorteios</th>
+                                    <th>Último Sorteio</th>
+                                    <th>Loteria</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>3572</td>
+                                    <td>8</td>
+                                    <td>28/02/2025</td>
+                                    <td>LOTECE</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>9814</td>
+                                    <td>7</td>
+                                    <td>27/02/2025</td>
+                                    <td>RJ-PT</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>6247</td>
+                                    <td>6</td>
+                                    <td>01/03/2025</td>
+                                    <td>SP-LBR</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>7391</td>
+                                    <td>6</td>
+                                    <td>25/02/2025</td>
+                                    <td>LOTEP</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>0428</td>
+                                    <td>5</td>
+                                    <td>26/02/2025</td>
+                                    <td>FEDERAL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Centenas Mais Sorteadas -->
+                <div class="stats-category">
+                    <h3 class="category-title">Centenas Mais Sorteadas</h3>
+                    <div class="stats-row">
+                        <div class="stats-card">
+                            <h4 class="stats-title"><i class="fas fa-crown"></i> Centena Mais Sorteada</h4>
+                            <div class="stats-value">357</div>
+                            <p class="stats-desc">Sorteada 15 vezes nos últimos 30 dias</p>
+                        </div>
+                        <div class="stats-card">
+                            <h4 class="stats-title"><i class="fas fa-medal"></i> Segunda Mais Sorteada</h4>
+                            <div class="stats-value">981</div>
+                            <p class="stats-desc">Sorteada 12 vezes nos últimos 30 dias</p>
+                        </div>
+                        <div class="stats-card">
+                            <h4 class="stats-title"><i class="fas fa-award"></i> Terceira Mais Sorteada</h4>
+                            <div class="stats-value">624</div>
+                            <p class="stats-desc">Sorteada 11 vezes nos últimos 30 dias</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <img src="/api/placeholder/800/300" alt="Gráfico de Centenas Mais Sorteadas" />
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Centena</th>
+                                    <th>Sorteios</th>
+                                    <th>Último Sorteio</th>
+                                    <th>Loteria</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>357</td>
+                                    <td>15</td>
+                                    <td>01/03/2025</td>
+                                    <td>LOTECE</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>981</td>
+                                    <td>12</td>
+                                    <td>28/02/2025</td>
+                                    <td>RJ-
