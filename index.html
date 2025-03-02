@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palpites e Resultados de Loterias</title>
+    <title>MORENO DA SORTE - Palpites e Resultados de Loterias</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --success-color: #2ecc71;
-            --warning-color: #f39c12;
+            --primary-color: #1e3a8a;
+            --secondary-color: #f59e0b;
+            --accent-color: #10b981;
+            --light-color: #f3f4f6;
+            --dark-color: #111827;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
         }
 
         * {
@@ -50,15 +51,17 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             display: flex;
             align-items: center;
+            color: var(--secondary-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         .logo i {
             margin-right: 10px;
-            color: var(--accent-color);
+            color: var(--secondary-color);
         }
 
         .nav-links {
@@ -74,14 +77,28 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 600;
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--secondary-color);
+        }
+        
+        .nav-links .jogue-agora {
+            background-color: var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .nav-links .jogue-agora:hover {
+            background-color: #0d9668;
+            color: white;
         }
 
         .hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), #2563eb);
             color: white;
             text-align: center;
             padding: 3rem 0;
@@ -90,8 +107,10 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero p {
@@ -136,7 +155,17 @@
 
         .tab-link.active {
             border-bottom: 3px solid var(--secondary-color);
-            color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        
+        .tab-link.jogue-agora {
+            background-color: var(--accent-color);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .tab-link.jogue-agora:hover {
+            background-color: #0d9668;
         }
 
         .tab-content {
@@ -158,9 +187,21 @@
             to { opacity: 1; }
         }
 
+        .lottery-categories {
+            margin-bottom: 30px;
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            margin: 20px 0 15px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+
         .lottery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
@@ -175,7 +216,7 @@
 
         .lottery-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
         .lottery-header {
@@ -226,6 +267,7 @@
             font-weight: bold;
             color: white;
             background-color: var(--secondary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .btn {
@@ -240,10 +282,11 @@
             transition: background-color 0.3s;
             text-align: center;
             width: 100%;
+            font-weight: 600;
         }
 
         .btn:hover {
-            background-color: #2980b9;
+            background-color: #e08c00;
         }
 
         .results-section {
@@ -339,6 +382,10 @@
         .stats-container {
             margin-top: 30px;
         }
+        
+        .stats-category {
+            margin-bottom: 30px;
+        }
 
         .stats-row {
             display: flex;
@@ -419,6 +466,51 @@
         tr:hover {
             background-color: #f8f9fa;
         }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        
+        .contact-icon {
+            font-size: 4rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .contact-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .contact-text {
+            margin-bottom: 25px;
+            color: #555;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        .contact-btn:hover {
+            background-color: #0d9668;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
 
         footer {
             background-color: var(--dark-color);
@@ -438,6 +530,7 @@
             margin-bottom: 15px;
             position: relative;
             padding-bottom: 10px;
+            color: var(--secondary-color);
         }
 
         .footer-section h3::after {
@@ -447,7 +540,7 @@
             bottom: 0;
             width: 50px;
             height: 2px;
-            background-color: var(--accent-color);
+            background-color: var(--secondary-color);
         }
 
         .footer-links {
@@ -488,7 +581,7 @@
         }
 
         .social-links a:hover {
-            background-color: var(--accent-color);
+            background-color: var(--secondary-color);
         }
 
         .copyright {
@@ -499,31 +592,62 @@
             font-size: 0.9rem;
             color: #ccc;
         }
-
+        
         /* Estilos específicos para cada tipo de loteria */
-        .megasena .lottery-header, .megasena .number-ball {
-            background-color: #209869;
+        .lotece .lottery-header, .lotece .number-ball {
+            background-color: #b91c1c;
         }
         
-        .lotofacil .lottery-header, .lotofacil .number-ball {
-            background-color: #930089;
+        .lotep .lottery-header, .lotep .number-ball {
+            background-color: #0369a1;
         }
         
-        .quina .lottery-header, .quina .number-ball {
-            background-color: #260085;
+        .federal .lottery-header, .federal .number-ball {
+            background-color: #047857;
         }
         
-        .lotomania .lottery-header, .lotomania .number-ball {
-            background-color: #F78100;
+        .rj .lottery-header, .rj .number-ball {
+            background-color: #4f46e5;
         }
         
-        .timemania .lottery-header, .timemania .number-ball {
-            background-color: #00FF48;
-            color: #333;
+        .sp .lottery-header, .sp .number-ball {
+            background-color: #7c3aed;
         }
         
-        .duplasena .lottery-header, .duplasena .number-ball {
-            background-color: #A61324;
+        .mt .lottery-header, .mt .number-ball {
+            background-color: #0891b2;
+        }
+        
+        .goias .lottery-header, .goias .number-ball {
+            background-color: #ca8a04;
+        }
+        
+        .df .lottery-header, .df .number-ball {
+            background-color: #4338ca;
+        }
+        
+        .bahia .lottery-header, .bahia .number-ball {
+            background-color: #15803d;
+        }
+        
+        .maranhao .lottery-header, .maranhao .number-ball {
+            background-color: #be123c;
+        }
+        
+        .minas .lottery-header, .minas .number-ball {
+            background-color: #c2410c;
+        }
+        
+        .parana .lottery-header, .parana .number-ball {
+            background-color: #0284c7;
+        }
+        
+        .rs .lottery-header, .rs .number-ball {
+            background-color: #b45309;
+        }
+        
+        .pernambuco .lottery-header, .pernambuco .number-ball {
+            background-color: #6366f1;
         }
 
         /* Responsividade */
@@ -552,8 +676,54 @@
                 display: none;
             }
             
-            .mobile-menu-btn {
+            .mobile-menu {
                 display: block;
+                font-size: 1.5rem;
+                color: white;
+                cursor: pointer;
+            }
+            
+            .mobile-menu-container {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                height: 100%;
+                background-color: var(--primary-color);
+                z-index: 999;
+                transition: left 0.3s;
+                padding: 20px;
+            }
+            
+            .mobile-menu-container.active {
+                left: 0;
+            }
+            
+            .mobile-menu-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 1.5rem;
+                color: white;
+                cursor: pointer;
+            }
+            
+            .mobile-nav-links {
+                list-style: none;
+                margin-top: 50px;
+            }
+            
+            .mobile-nav-links li {
+                margin-bottom: 15px;
+            }
+            
+            .mobile-nav-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.2rem;
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
             }
         }
 
@@ -589,7 +759,7 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Modal */
+        /* Modal para Palpites */
         .modal {
             display: none;
             position: fixed;
@@ -597,7 +767,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.6);
             z-index: 999;
             align-items: center;
             justify-content: center;
@@ -606,8 +776,10 @@
         .modal-content {
             background-color: white;
             border-radius: 8px;
-            max-width: 500px;
+            max-width: 800px;
             width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
             padding: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -619,42 +791,143 @@
             top: 15px;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--dark-color);
         }
 
         .modal-title {
             margin-top: 0;
             color: var(--primary-color);
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 10px;
             margin-bottom: 15px;
+        }
+        
+        .palpites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .palpite-box {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .palpite-header {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .palpite-numbers {
+            font-size: 1.1rem;
+        }
+        
+        /* Estilo para as abas no modal */
+        .modal-tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        
+        .modal-tab {
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .modal-tab.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .modal-tab-content {
+            display: none;
+        }
+        
+        .modal-tab-content.active {
+            display: block;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
         }
 
     </style>
 </head>
 <body>
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://w.app/ngczri" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Cabeçalho -->
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <i class="fas fa-clover"></i>
-                    <span>Palpites de Loteria</span>
+                    <i class="fas fa-crown"></i>
+                    <span>MORENO DA SORTE</span>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#palpites">Palpites</a></li>
                     <li><a href="#resultados">Resultados</a></li>
                     <li><a href="#estatisticas">Estatísticas</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Fale Comigo</a></li>
+                    <li><a href="https://app.aguiaoficial.com/pr/ZXbjMC6Q" target="_blank" class="jogue-agora">JOGUE AGORA</a></li>
                 </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
         </div>
     </header>
 
+    <!-- Menu Mobile -->
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#palpites">Palpites</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#estatisticas">Estatísticas</a></li>
+            <li><a href="#contato">Fale Comigo</a></li>
+            <li><a href="https://app.aguiaoficial.com/pr/ZXbjMC6Q" target="_blank">JOGUE AGORA</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Gerador de Palpites e Resultados de Loterias</h1>
-            <p>Confira palpites gerados com base em algoritmos estatísticos e acompanhe os últimos resultados de todas as loterias oficiais</p>
+            <h1>MORENO DA SORTE</h1>
+            <p>Palpites diários e resultados para todas as loterias do Brasil</p>
             <div class="disclaimer">
                 Este site tem finalidade apenas educativa. Não garantimos acertos e não incentivamos jogos de azar.
             </div>
@@ -674,235 +947,49 @@
             <div class="tab-link" data-tab="estatisticas">
                 <i class="fas fa-chart-bar"></i> Estatísticas
             </div>
+            <div class="tab-link" data-tab="contato">
+                <i class="fas fa-phone-alt"></i> Fale Comigo
+            </div>
+            <a href="https://app.aguiaoficial.com/pr/ZXbjMC6Q" target="_blank" class="tab-link jogue-agora">
+                <i class="fas fa-gamepad"></i> JOGUE AGORA
+            </a>
         </div>
 
         <!-- Conteúdo das Abas -->
         <!-- Aba de Palpites -->
         <div id="palpites" class="tab-content active">
-            <h2>Gerador de Palpites</h2>
-            <p>Selecione uma loteria abaixo para gerar palpites baseados em diferentes algoritmos</p>
+            <h2>Palpites do Dia</h2>
+            <p>Confira os melhores palpites diários para todas as loterias. Atualizados às 00:00.</p>
             
-            <div class="lottery-grid">
-                <!-- Mega-Sena -->
-                <div class="lottery-card megasena">
-                    <div class="lottery-header">
-                        <h3 class="lottery-title">Mega-Sena</h3>
-                        <p class="lottery-desc">6 números de 1 a 60</p>
-                        <div class="lottery-icon">
-                            <i class="fas fa-dice"></i>
+            <div class="lottery-categories">
+                <!-- Nordeste -->
+                <h3 class="category-title">Nordeste</h3>
+                <div class="lottery-grid">
+                    <!-- LOTECE -->
+                    <div class="lottery-card lotece">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">LOTECE</h3>
+                            <p class="lottery-desc">Loteria do Ceará</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                        </div>
+                        <div class="lottery-body">
+                            <div class="numbers-container" id="lotece-numbers">
+                                <div class="number-ball">2354</div>
+                                <div class="number-ball">7845</div>
+                                <div class="number-ball">9065</div>
+                            </div>
+                            <button class="btn" onclick="showPalpites('lotece')">Ver 10 Palpites</button>
                         </div>
                     </div>
-                    <div class="lottery-body">
-                        <div class="numbers-container" id="megasena-numbers">
-                            <!-- Números serão inseridos aqui via JavaScript -->
-                        </div>
-                        <button class="btn" onclick="generateNumbers('megasena', 6, 60)">Gerar Palpite</button>
-                    </div>
-                </div>
 
-                <!-- Lotofácil -->
-                <div class="lottery-card lotofacil">
-                    <div class="lottery-header">
-                        <h3 class="lottery-title">Lotofácil</h3>
-                        <p class="lottery-desc">15 números de 1 a 25</p>
-                        <div class="lottery-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="lottery-body">
-                        <div class="numbers-container" id="lotofacil-numbers">
-                            <!-- Números serão inseridos aqui via JavaScript -->
-                        </div>
-                        <button class="btn" onclick="generateNumbers('lotofacil', 15, 25)">Gerar Palpite</button>
-                    </div>
-                </div>
-
-                <!-- Quina -->
-                <div class="lottery-card quina">
-                    <div class="lottery-header">
-                        <h3 class="lottery-title">Quina</h3>
-                        <p class="lottery-desc">5 números de 1 a 80</p>
-                        <div class="lottery-icon">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                    </div>
-                    <div class="lottery-body">
-                        <div class="numbers-container" id="quina-numbers">
-                            <!-- Números serão inseridos aqui via JavaScript -->
-                        </div>
-                        <button class="btn" onclick="generateNumbers('quina', 5, 80)">Gerar Palpite</button>
-                    </div>
-                </div>
-
-                <!-- Lotomania -->
-                <div class="lottery-card lotomania">
-                    <div class="lottery-header">
-                        <h3 class="lottery-title">Lotomania</h3>
-                        <p class="lottery-desc">50 números de 1 a 100</p>
-                        <div class="lottery-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                    </div>
-                    <div class="lottery-body">
-                        <div class="numbers-container" id="lotomania-numbers">
-                            <!-- Números serão inseridos aqui via JavaScript -->
-                        </div>
-                        <button class="btn" onclick="generateNumbers('lotomania', 50, 100)">Gerar Palpite</button>
-                    </div>
-                </div>
-
-                <!-- Timemania -->
-                <div class="lottery-card timemania">
-                    <div class="lottery-header">
-                        <h3 class="lottery-title">Timemania</h3>
-                        <p class="lottery-desc">10 números de 1 a 80</p>
-                        <div class="lottery-icon">
-                            <i class="fas fa-futbol"></i>
-                        </div>
-                    </div>
-                    <div class="lottery-body">
-                        <div class="numbers-container" id="timemania-numbers">
-                            <!-- Números serão inseridos aqui via JavaScript -->
-                        </div>
-                        <button class="btn" onclick="generateNumbers('timemania', 10, 80)">Gerar Palpite</button>
-                    </div>
-                </div>
-
-                <!-- Dupla Sena -->
-                <div class="lottery-card duplasena">
-                    <div class="lottery-header">
-                        <h3 class="lottery-title">Dupla Sena</h3>
-                        <p class="lottery-desc">6 números de 1 a 50</p>
-                        <div class="lottery-icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                    </div>
-                    <div class="lottery-body">
-                        <div class="numbers-container" id="duplasena-numbers">
-                            <!-- Números serão inseridos aqui via JavaScript -->
-                        </div>
-                        <button class="btn" onclick="generateNumbers('duplasena', 6, 50)">Gerar Palpite</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Aba de Resultados -->
-        <div id="resultados" class="tab-content">
-            <h2>Últimos Resultados</h2>
-            <p>Confira os últimos resultados das loterias oficiais</p>
-            
-            <div class="filter-section">
-                <h3>Filtros</h3>
-                <div class="filter-grid">
-                    <div class="filter-box">
-                        <label class="filter-label">Loteria:</label>
-                        <select class="filter-select" id="lottery-filter">
-                            <option value="all">Todas</option>
-                            <option value="megasena">Mega-Sena</option>
-                            <option value="lotofacil">Lotofácil</option>
-                            <option value="quina">Quina</option>
-                            <option value="lotomania">Lotomania</option>
-                            <option value="timemania">Timemania</option>
-                            <option value="duplasena">Dupla Sena</option>
-                        </select>
-                    </div>
-                    <div class="filter-box">
-                        <label class="filter-label">Período:</label>
-                        <select class="filter-select" id="period-filter">
-                            <option value="7">Últimos 7 dias</option>
-                            <option value="30">Últimos 30 dias</option>
-                            <option value="90">Últimos 3 meses</option>
-                            <option value="180">Últimos 6 meses</option>
-                            <option value="365">Último ano</option>
-                        </select>
-                    </div>
-                    <div class="filter-box">
-                        <label class="filter-label">Ordenar por:</label>
-                        <select class="filter-select" id="order-filter">
-                            <option value="date-desc">Data (mais recente)</option>
-                            <option value="date-asc">Data (mais antiga)</option>
-                            <option value="prize-desc">Prêmio (maior)</option>
-                            <option value="prize-asc">Prêmio (menor)</option>
-                        </select>
-                    </div>
-                    <div class="filter-box">
-                        <label class="filter-label">Concurso:</label>
-                        <input type="text" class="filter-input" id="contest-filter" placeholder="Número do concurso">
-                    </div>
-                </div>
-            </div>
-            
-            <div id="results-container" class="results-section">
-                <!-- Resultados serão carregados aqui via JavaScript -->
-                <div class="loader">
-                    <div class="spinner"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Aba de Estatísticas -->
-        <div id="estatisticas" class="tab-content">
-            <h2>Estatísticas e Análises</h2>
-            <p>Confira análises estatísticas das loterias para ajudar na escolha de seus palpites</p>
-            
-            <div class="filter-section">
-                <h3>Selecione a Loteria</h3>
-                <select class="filter-select" id="stats-lottery-select">
-                    <option value="megasena">Mega-Sena</option>
-                    <option value="lotofacil">Lotofácil</option>
-                    <option value="quina">Quina</option>
-                    <option value="lotomania">Lotomania</option>
-                    <option value="timemania">Timemania</option>
-                    <option value="duplasena">Dupla Sena</option>
-                </select>
-            </div>
-            
-            <div class="stats-container">
-                <div class="stats-row">
-                    <div class="stats-card">
-                        <h3 class="stats-title"><i class="fas fa-dollar-sign"></i> Prêmio Médio</h3>
-                        <div class="stats-value">R$ 35.678.901</div>
-                        <p class="stats-desc">Média dos últimos 12 meses</p>
-                    </div>
-                    <div class="stats-card">
-                        <h3 class="stats-title"><i class="fas fa-trophy"></i> Maior Prêmio</h3>
-                        <div class="stats-value">R$ 120.000.000</div>
-                        <p class="stats-desc">Registrado em 31/12/2023</p>
-                    </div>
-                    <div class="stats-card">
-                        <h3 class="stats-title"><i class="fas fa-users"></i> Ganhadores</h3>
-                        <div class="stats-value">237</div>
-                        <p class="stats-desc">Total de ganhadores no último ano</p>
-                    </div>
-                </div>
-                
-                <h3>Números Mais Sorteados</h3>
-                <div class="chart-container" id="frequent-numbers-chart">
-                    <!-- Gráfico será inserido aqui via JavaScript -->
-                </div>
-                
-                <h3>Números Menos Sorteados</h3>
-                <div class="chart-container" id="least-frequent-numbers-chart">
-                    <!-- Gráfico será inserido aqui via JavaScript -->
-                </div>
-                
-                <h3>Atrasos de Números</h3>
-                <div class="table-container">
-                    <table id="delays-table">
-                        <thead>
-                            <tr>
-                                <th>Número</th>
-                                <th>Últimos Sorteios</th>
-                                <th>Atraso (concursos)</th>
-                                <th>Frequência Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Dados serão inseridos aqui via JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                    <!-- LOTEP -->
+                    <div class="lottery-card lotep">
+                        <div class="lottery-header">
+                            <h3 class="lottery-title">LOTEP</h3>
+                            <p class="lottery-desc">Loteria da Paraíba</p>
+                            <div class="lottery-icon">
+                                <i class="fas fa-ticket-alt"></i>
         </div>
     </div
